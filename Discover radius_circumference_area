@@ -1,0 +1,31 @@
+package csu;
+
+//imported math logic
+import java.lang.Math;
+
+//the testing of someone's code 
+public class degree {
+
+	 public static void main (String[] args) 
+	 {
+	  
+		 //The variables that are in play
+	  double area;     //calculated area
+	  double circum;  //calculated circumference
+	  double radius;  //radius value
+	  
+	  //the created number
+	  radius = 6.25;
+	  
+	  //the math for the area and circumference
+	  area = Math.PI * Math.pow(radius,2);
+	  circum = 2.0 * Math.PI * radius;
+	  
+	  //Print out the math 
+	  System.out.println
+	      ("The Circumference of a Circle whose radius is " + radius + " is " + circum);
+	  System.out.println
+	      ("The Area of a Circle whose radius is " + radius + " is " + area);
+	 }      
+	
+}
