@@ -1,0 +1,90 @@
+package csu;
+
+//Import scanner
+import java.util.Scanner;
+
+public class Task_1 {
+
+	public static void main(String[] args) {
+		
+		//the scanner's name 
+		Scanner input = new Scanner(System.in);
+		
+		//presenting the user options
+		System.out.println("1) Author info");
+		System.out.println("2) Check if odd");
+		System.out.println("3) Check if even");
+		System.out.println("4) Check if positive");
+		
+		//asking the user for their pick
+		System.out.print("What is your pick: ");
+		int num = input.nextInt();
+		
+		//if the user picks one
+		if(num == 1) {
+			//The code creator's name and ID
+			System.out.println("Jose Burgos");
+			System.out.println("2744042");
+		}
+		
+		//if the user picks two
+		if(num == 2) {
+			//the variable
+			int odd;
+			
+			//asking the user for an integer
+			System.out.print("Enter an odd integer: ");
+			odd = input.nextInt();
+			
+			//present if the number is odd
+			if(odd % 2 == 1) {
+				System.out.println("Yes");
+			}
+			else
+			{
+				System.out.println("No");
+			}
+		}
+		
+		//if the user picks three
+		if(num == 3) {
+			//the variable
+			int even;
+			
+			//asking the user for an integer
+			System.out.print("Enter an even integer: ");
+			even = input.nextInt();
+			
+			//present if the number is even
+			if(even % 2 == 0) {
+				System.out.println("Yes");
+			}
+			else
+			{
+				System.out.println("No");
+			}
+		}
+		
+		//if the user picks four
+		if(num == 4) {
+			//the variable
+			int pos;
+			
+			//asking the user for an integer
+			System.out.print("Enter a positive integer: ");
+			pos = input.nextInt();
+			
+			//presents of the number is positive
+			if(pos > 0) {
+				System.out.println("Yes");
+			}
+			else
+			{
+				System.out.println("No");
+			}
+			
+		}
+		//closes the Scanner
+		input.close();
+	}
+}
