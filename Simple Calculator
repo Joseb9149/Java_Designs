@@ -1,0 +1,187 @@
+package csu;
+
+//importing a scanner 
+import java.util.Scanner;
+
+public class Project_1 {
+
+	public static void main(String[] args) {
+		
+		//Naming the scanner
+		Scanner input = new Scanner(System.in);
+		
+		//the users options
+		System.out.println("1) Authors info");
+		System.out.println("2) Interger Operation");
+		System.out.println("3) Floating point Operation");
+		System.out.println("0) Exit\n");
+		
+		//asking the user to pick one
+		System.out.print("What it your pick: ");
+		int pick = input.nextInt();
+		
+		//if the user does not pick any of the options
+		if(pick != 0 && pick != 1 && pick != 2 && pick != 3) {
+			System.out.println("Invalid Selection.\n");
+		}
+		
+		
+		//is the user picks one
+		if(pick == 1) {
+			System.out.println("Jose Burgos");
+			System.out.println("2744042");
+		}
+		
+		
+		//if the user picks two
+		if(pick == 2) {
+			System.out.println("Enter an interger operation problem.");
+			System.out.println("Equation will be entered with the following format:");
+			System.out.println("num1 op num2 or in the case 3 plus 4");
+			
+			//the first integer
+			System.out.print("What is your integer problem: ");
+			String first = input.next();
+			
+			//is nothing is inputed
+			if(first == " ") {
+				System.out.println("Invalid Selection");
+			}
+			
+			//This would aquiring the other information while passing the spaces
+			//stackoverflow for the array style for the split
+			String[] position = input.nextLine().split(" ");
+			
+			//these are the storage for the information
+			String num1 = position[0];
+			String operation = position[1];
+			String num2 = position[2];
+			
+			//converting the string to an int
+			int firstCovert = Integer.parseInt(first);
+			
+			//creating switch cases for the operations
+			String x = position[1];
+			switch(x) {
+			
+			case "+":
+				int convert1 = Integer.parseInt(num2);
+				int answer1 = firstCovert + convert1;
+				System.out.print(first + " " + position[1] + " " + position[2] + " = " + answer1);
+				break;
+				
+			case "-":
+				int convert2 = Integer.parseInt(num2);
+				int answer2 = firstCovert - convert2;
+				System.out.print(first + " " + position[1] + " " + position[2] + " = " + answer2);
+				break;
+				
+			case "*":
+				int convert3 = Integer.parseInt(num2);
+				int answer3 = firstCovert * convert3;
+				System.out.print(first + " " + position[1] + " " + position[2] + " = " + answer3);
+				break;
+				
+			case "/":
+				int convert4 = Integer.parseInt(num2);
+				if( convert4 == 0) {
+					System.out.println("Cannot divide by 0.");
+					break;
+				}
+				int answer4 = firstCovert / convert4;
+				System.out.print(first + " " + position[1] + " " + position[2] + " = " + answer4);
+				break;
+				
+			case "%":
+				int convert5 = Integer.parseInt(num2);
+				int answer5 = firstCovert % convert5;
+				System.out.print(first + " " + position[1] + " " + position[2] + " = " + answer5);
+				break;
+				
+			case "x":
+				int convert6 = Integer.parseInt(num2);
+				int answer6 = firstCovert % convert6;
+				System.out.print(first + " " + position[1] + " " + position[2] + " = " + answer6);
+				break;
+			}
+		}
+		
+		
+		//if the user picks three
+		if(pick == 3) {
+			System.out.println("Enter an floating operation problem.");
+			System.out.println("Equation will be entered with the following format:");
+			System.out.println("num1.0 op num2.0 or in the case 3.0 plus 4.0");
+			
+			//the first double
+			System.out.print("What is your float problem: ");
+			double firstDouble = input.nextDouble();
+
+			//This would aquiring the other information while passing the spaces
+			String[] position = input.nextLine().split(" ");
+			
+			//these are the storage for the information
+			String num1 = position[0];
+			String operation = position[1];
+			String num2 = position[2];
+
+			String x = position[1];
+			switch(x) {
+			
+			case "+":
+				double convert1 = Double.parseDouble(num2);
+				double answer1 = firstDouble + convert1;
+				System.out.print(firstDouble + " " + position[1] + " " + position[2] + " = " + answer1);
+				break;
+				
+			case "-":
+				double convert2 = Double.parseDouble(num2);
+				double answer2 = firstDouble - convert2;
+				System.out.print(firstDouble + " " + position[1] + " " + position[2] + " = " + answer2);
+				break;
+				
+			case "*":
+				double convert3 =  Double.parseDouble(num2);
+				double answer3 = firstDouble * convert3;
+				System.out.print(firstDouble + " " + position[1] + " " + position[2] + " = " + answer3);
+				break;
+				
+			case "/":
+				double convert4 =  Double.parseDouble(num2);
+				if( convert4 == 0.0) {
+					System.out.println("Cannot divide by 0.");
+					break;
+				}
+				double answer4 = firstDouble / convert4;
+				System.out.print(firstDouble + " " + position[1] + " " + position[2] + " = " + answer4);
+				break;
+				
+			case "%":
+				double convert5 =  Double.parseDouble(num2);
+				if( convert5 == 0.0) {
+					System.out.println("Cannot divide by 0.");
+					break;
+				}
+				double answer5 = firstDouble % convert5;
+				System.out.print(firstDouble + " " + position[1] + " " + position[2] + " = " + answer5);
+				break;
+				
+			case"x":
+				double convert6 =  Double.parseDouble(num2);
+				double answer6 = firstDouble * convert6;
+				System.out.print(firstDouble + " " + position[1] + " " + position[2] + " = " + answer6);
+				break;
+			}
+		}
+		
+		
+		//if the user picks zero
+		if(pick == 0) {
+			System.out.println("Good Bye!");
+		}
+		
+		
+		//closing the scanner
+		input.close();
+	}
+}
